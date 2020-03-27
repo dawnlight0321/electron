@@ -233,6 +233,8 @@ base::RefCountedMemory* ElectronContentClient::GetDataResourceBytes(
 void ElectronContentClient::AddAdditionalSchemes(Schemes* schemes) {
   AppendDelimitedSwitchToVector(switches::kServiceWorkerSchemes,
                                 &schemes->service_worker_schemes);
+  AppendDelimitedSwitchToVector(switches::kStandardSchemes,
+                                &schemes->standard_schemes);
   AppendDelimitedSwitchToVector(switches::kSecureSchemes,
                                 &schemes->secure_schemes);
   AppendDelimitedSwitchToVector(switches::kBypassCSPSchemes,
